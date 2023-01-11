@@ -5,8 +5,6 @@ from flask import Flask, redirect, render_template, request
 
 load_dotenv(find_dotenv())
 
-# If you want to use your own environment variables from your local .env file, then change all instances of:
-# "os.environ.get()" to "os.getenv()".
 pool = mysql.connector.pooling.MySQLConnectionPool(
     pool_name=os.environ.get('POOL_NAME'),
     pool_reset_session=True,
